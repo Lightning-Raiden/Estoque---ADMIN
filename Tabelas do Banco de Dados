@@ -1,0 +1,21 @@
+use estoque;
+
+CREATE TABLE tbl_produto (
+ img_prod varchar(255) DEFAULT 'imagem-indisponivel.jpg',
+ id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ nome varchar(75) NOT NULL,
+ preco int(11) DEFAULT NULL,
+ quantidade int(11) DEFAULT NULL,
+ quantidade_min int(11) DEFAULT NULL
+);
+
+
+CREATE TABLE tbl_usuario (
+ token varchar(255) DEFAULT NULL,
+ id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ nome varchar(120) NOT NULL,
+ email varchar(100) NOT NULL,
+ senha varchar(255) NOT NULL,
+ avatar varchar(255) DEFAULT NULL,
+ nivel tinyint(1) NOT NULL
+);
